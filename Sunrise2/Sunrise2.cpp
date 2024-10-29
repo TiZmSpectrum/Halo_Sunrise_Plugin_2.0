@@ -3,7 +3,11 @@
 //
 //  Dev:
 //			Byrom
-// 
+//
+//	Burnout Revenge support:
+//
+//			TiZmSpectrum
+//
 //  Credits:
 //			craftycodie - Halo hooks and address
 //-----------------------------------------------------------------------------
