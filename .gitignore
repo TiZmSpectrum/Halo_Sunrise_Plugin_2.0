@@ -352,3 +352,13 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+Sunrise2/Sunrise2.Auto.XGD
+xkelib/kernelext.exp
+/xkelib
+/xkelib
+xkelib/kernelext.lib
+xkelib/xamext.exp
+xkelib/xamext.lib
+/xkelib
+*.exp
+/xkelib

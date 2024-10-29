@@ -30,6 +30,7 @@ DWORD Halo3ExternalBeta = 0x4D53880C;
 DWORD Halo3 = 0x4D5307E6;
 DWORD Halo3ODST = 0x4D530877;
 DWORD HaloReach = 0x4D53085B;
+DWORD Burnout4 = 0x454107DC;
 
 BOOL bAllowRetailPlayers = TRUE;
 BOOL bIgnoreTrueskill = FALSE;
@@ -242,6 +243,42 @@ VOID Initialise()
 				}
 
 				}
+			}
+			else if (TitleID == Burnout4)
+			{
+			RegisterActiveServer(sunrise_ip, sunrise_port, sunrise_description);
+
+			Readini(); // Read the ini each time Burnout Revenge is loaded to avoid having to reload the plugin
+
+			PLDR_DATA_TABLE_ENTRY PLDR_Burnout4xex = (PLDR_DATA_TABLE_ENTRY)*XexExecutableModuleHandle;
+			switch (PLDR_Burnout4xex->TimeDateStamp) // Detects the exact xex by timestamp. Prevents patching static addresses in the wrong xex.
+			{
+			case 0x454107DC: // Burnout Revenge
+			{
+				Sunrise_Dbg("Burnout Revenge detected! Initialising hooks...");
+				SetupNetDllHooks();
+
+				XNotify(L"Halo Sunrise Intialised!");
+				break;
+			}
+			case 0x4417FACF: // Burnout Revenge TU
+			{
+				Sunrise_Dbg("Burnout Revenge TU detected! Initialising hooks...");
+				SetupNetDllHooks();
+
+				XNotify(L"Halo Sunrise Intialised!");
+				break;
+			}
+			default:
+			{
+				Sunrise_Dbg("Unrecognized Burnout Revenge xex! TimeDateStamp: 0x%X", PLDR_Burnout4xex->TimeDateStamp); // Print the timestamp so we can support this xex later if required.
+				SetupNetDllHooks();
+
+				XNotify(L"Halo Sunrise Intialised!");
+				break;
+			}
+
+			}
 			}
 			else if (TitleID == HaloReach) // Future Reach support
 			{
