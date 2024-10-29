@@ -1,0 +1,6 @@
+[XNET:1] Warning: XNetUnregisterKey failed: 10022
+^[XNET:1] Warning: XNKID 0000000000000000 is not registered!
+^[XNET:1] Warning: XNKID 0000000000000000 is not registered!
+[XNET:1] Warning: XNetUnregisterKey failed: 10022
+^[XNET:2] qosWarn: [DISCARD] 001C4B5981C976AB/0 #2: SecMsgSgToXbQosResp to [SG <0.227.188.0 0.141.79.150> 20.230.192.7:3074 READY] cannot find CQosCli
+^[XNET:2] qosWarn: [DISCARD] 001C4B5981C976AB/0 #2: SecMsgSgToXbQosResp to [SG <0.227.188.0 0.141.79.150> 20.230.192.7:3074 READY] cannot find CQosCli
