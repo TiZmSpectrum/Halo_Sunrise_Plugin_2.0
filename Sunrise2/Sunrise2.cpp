@@ -4,7 +4,7 @@
 //  Dev:
 //			Byrom
 //
-//	Burnout Revenge support:
+//  Burnout Revenge support:
 //
 //			TiZmSpectrum
 //
